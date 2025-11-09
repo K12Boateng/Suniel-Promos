@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suniel Promos Limited - Corporate Souvenirs & Tech Gadgets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-red {
+            background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #DC2626;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .card-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .card-shine:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex items-center gap-3">
+                        <div class="w-16 h-16 rounded-lg flex items-center justify-center overflow-hidden">
+                            <img src="imgs/suniel-logo.jpg" alt="Suniel Promos Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-gray-900">SUNIEL PROMOS</h1>
+                            <p class="text-sm text-gray-500">Limited</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-red-600 font-medium">Home</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-red-600 font-medium">Products</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-red-600 font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-red-600 font-medium">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <button class="gradient-red text-white px-6 py-2.5 rounded-lg font-medium hover:shadow-lg transition-all duration-300">
+                        Get Quote
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-red-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block mb-4">
+                        <span class="bg-red-50 text-red-600 px-4 py-2 rounded-full text-sm font-semibold">
+                            🎁 Premium Corporate Solutions
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Elevate Your Brand with
+                        <span class="gradient-text"> Premium Gifts</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        We specialize in large-scale supply of corporate souvenirs and cutting-edge tech gadgets that leave lasting impressions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="gradient-red text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>Explore Catalog</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </button>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-red-600 hover:text-red-600 transition-all duration-300">
+                            Request Quote
+                        </button>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-3 gap-6">
+                        <div>
+                            <p class="text-3xl font-bold text-red-600">500+</p>
+                            <p class="text-sm text-gray-600">Happy Clients</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-red-600">10K+</p>
+                            <p class="text-sm text-gray-600">Products Delivered</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-red-600">15+</p>
+                            <p class="text-sm text-gray-600">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative float-animation">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800" alt="Corporate Gifts" class="rounded-2xl shadow-2xl">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-30"></div>
+                    <div class="absolute -top-10 -left-10 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Suniel Promos?</h2>
+                <p class="text-xl text-gray-600">Excellence in every detail, value in every product</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale card-shine">
+                    <div class="w-14 h-14 gradient-red rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bulk Supply Experts</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Specialized in large-scale orders for corporations, ensuring consistent quality and timely delivery for all your events and campaigns.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale card-shine">
+                    <div class="w-14 h-14 gradient-red rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Every product undergoes rigorous quality checks. We source only the finest tech gadgets and corporate gifts for your brand.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale card-shine">
+                    <div class="w-14 h-14 gradient-red rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Branding</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Full customization services including logo printing, engraving, and packaging to perfectly align with your brand identity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Product Categories</h2>
+                <p class="text-xl text-gray-600">Curated selection for every corporate need</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Tech Gadgets" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Tech Gadgets</h3>
+                        <p class="text-gray-200 text-sm">Latest electronics & accessories</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1587907069702-3ac45e02e0f7?w=500" alt="Corporate Gifts" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Corporate Gifts</h3>
+                        <p class="text-gray-200 text-sm">Premium souvenirs & awards</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1522198428577-adf2d374b05b?w=500" alt="Branded Merchandise" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Branded Items</h3>
+                        <p class="text-gray-200 text-sm">Custom promotional products</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1587059604646-a647be36e6f6?w=500" alt="Office Supplies" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Office Essentials</h3>
+                        <p class="text-gray-200 text-sm">Professional workplace items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-red-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Comprehensive Corporate Solutions</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        From concept to delivery, we handle every aspect of your corporate gifting and promotional needs.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">Consultation & Design</h4>
+                                <p class="text-gray-600">Expert guidance on product selection and custom design solutions tailored to your brand.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">Logo & Branding Services</h4>
+                                <p class="text-gray-600">Professional printing, engraving, and embossing to showcase your brand perfectly.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 mb-2">Large-Scale Fulfillment</h4>
+                                <p class="text-gray-600">Efficient handling of bulk orders with reliable logistics and on-time delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?w=800" alt="Services" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 gradient-red rounded-full flex items-center justify-center">
+                                <span class="text-white text-2xl font-bold">24/7</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Customer Support</p>
+                                <p class="text-sm text-gray-600">Always here to help</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600">Trusted by leading corporations worldwide</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Outstanding quality and service! Suniel Promos delivered 5,000 branded power banks for our annual conference. Every piece was perfect."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <span class="text-red-600 font-bold">JM</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">James Mitchell</p>
+                            <p class="text-sm text-gray-500">CEO, TechVision Corp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Reliable partner for all our corporate gifting needs. Their attention to detail and customization options are unmatched."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <span class="text-red-600 font-bold">SP</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah Patterson</p>
+                            <p class="text-sm text-gray-500">Director, Global Events Ltd</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Professional team, competitive pricing, and exceptional product range. Suniel Promos is now our exclusive gifting supplier."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <span class="text-red-600 font-bold">DK</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">David Kim</p>
+                            <p class="text-sm text-gray-500">VP Marketing, Innovate Inc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Elevate Your Brand?
+            </h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                Get a custom quote for your corporate gifting needs. Our team is ready to help you make a lasting impression.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2">
+                    <span>Request a Quote</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
+                    View Catalog
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Have a project in mind? Let's discuss how we can help you create memorable corporate experiences.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                <p class="text-gray-600">+233 (0) 24 XXX XXXX</p>
+                                <p class="text-gray-600">+233 (0) 54 XXX XXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                <p class="text-gray-600">info@sunielpromos.com</p>
+                                <p class="text-gray-600">sales@sunielpromos.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 gradient-red rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
+                                <p class="text-gray-600">Accra, Ghana</p>
+                                <p class="text-gray-600">Serving clients nationwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-red-600 hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-all" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-all" placeholder="john@company.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-all" placeholder="+233 XX XXX XXXX">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-all resize-none" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-red text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="imgs/suniel-logo.jpg" alt="Suniel Logo" class="h-12 w-auto">
+                        <div>
+                            <h3 class="text-lg font-bold">SUNIEL PROMOS</h3>
+                            <p class="text-xs text-gray-400">Limited</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Your trusted partner for premium corporate souvenirs and modern tech gadgets.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-red-500 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Our Products</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Bulk Orders</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Custom Branding</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Corporate Gifts</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition-colors">Tech Gadgets</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for exclusive offers and updates</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none">
+                        <button class="gradient-red px-4 py-2 rounded-lg hover:shadow-lg transition-all">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Suniel Promos Limited. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-red-500 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-red-500 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-red-500 transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                nav.classList.remove('shadow-lg');
+            } else {
+                nav.classList.add('shadow-lg');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
